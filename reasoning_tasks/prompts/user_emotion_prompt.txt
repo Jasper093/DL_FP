@@ -1,0 +1,5 @@
+Identify the user's current emotion.
+Choose exactly one label from:
+anger, sadness, disgust, depression, fear, neutral, joy
+
+Answer with only the label.

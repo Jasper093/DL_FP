@@ -1,0 +1,19 @@
+model:
+  path: "/mnt/Internal/ASR/huggingface_cache/models--Qwen--Qwen-7B-Chat"
+  trust_remote_code: true
+  local_files_only: true
+  use_4bit: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_use_double_quant: true
+  dtype: "float16"
+
+lora:
+  enabled: true
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+  target_modules:
+    - "c_attn"
+    - "c_proj"

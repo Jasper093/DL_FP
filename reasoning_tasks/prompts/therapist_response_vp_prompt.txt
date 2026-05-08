@@ -1,0 +1,23 @@
+Task:
+Generate the therapist's next turn.
+
+The output must contain two fields:
+1. video_list: a list of descriptions of the therapist’s visual and emotional presentation
+2. utterance_list: a list of the therapist’s spoken utterances
+
+Output Format:
+
+video_list:
+- <description>
+- <description>
+
+utterance_list:
+- <utterance>
+- <utterance>
+
+Requirements:
+- Follow the style of the dataset
+- Keep each list item concise and natural
+- The number of items in each list can vary depending on the response
+- Ensure the video cues and utterances are consistent with each other
+- Do not include any extra text outside the two fields

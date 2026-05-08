@@ -63,11 +63,13 @@ data/processed/
 *.jsonl
 *.csv
 *.xlsx
+text/*.txt
 
 # Optional: ignore downloaded/generated datasets
 *.json
 !configs/*.json
 !**/configs/*.json
+!text/*json
 
 # =========================
 # Hugging Face / model cache

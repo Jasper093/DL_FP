@@ -1,0 +1,44 @@
+task_name: "therapist_response"
+task_type: "generation"
+train_path: "data/processed/therapist_response/train.jsonl"
+val_path: "data/processed/therapist_response/val.jsonl"
+test_path: "data/processed/therapist_response/test.jsonl"
+prompt_dir: "prompts"
+output_dir: "runs/therapist_response/run_001"
+init_adapter_path: "runs/therapist_emotion/run_001/best_adapter"
+
+batch_size: 1
+lr: 0.00002
+epochs: 3
+max_length: 768
+max_new_tokens: 192
+
+formatting:
+  sph_arng_mod: paired
+  sys_reaction: verbal
+
+post_val:
+  run_dir: "runs/therapist_response/run_001"
+  batch_size: 4
+  max_length: 768
+  max_new_tokens: 192
+  device: "cuda"
+  percentile: 0.2
+
+inference:
+  run_dir: "runs/therapist_response/run_audioInf"
+  input_path: "data/processed/therapist_response/val.jsonl"
+  adapter_path: "runs/therapist_response/run_001/best_adapter"
+  mode: pretrained    # pretrained | lora | full
+  batch_size: 4
+  max_length: 2048
+  max_new_tokens:  256
+  device: "cuda"
+  percentile: 0.2
+  ablation:
+    video: True
+    history: True
+    emotion: True
+    strategy: True
+
+eval_mode: inference

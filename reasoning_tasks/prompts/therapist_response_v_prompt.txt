@@ -1,0 +1,15 @@
+Task:
+Generate the therapist's next spoken response.
+
+Output Format Example:
+utterance_list:
+- <therapist utterance 1>
+- <therapist utterance 2>
+(The list goes on if needed, but there should be at least one utterance string.)
+
+Requirements:
+- Output only utterance_list.
+- Do not output video_list.
+- Do not copy dialogue history.
+- Do not explain.
+- Do not include any extra text outside the required format.

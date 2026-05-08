@@ -1,0 +1,5 @@
+Predict the emotional tone of the therapist's next turn.
+Choose exactly one label from:
+anger, sadness, disgust, depression, fear, neutral, joy
+
+Answer with only the label.

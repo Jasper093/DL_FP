@@ -1,0 +1,53 @@
+task_name: "therapist_strategy"
+task_type: "classification"
+train_path: "data/processed/therapist_strategy/train.jsonl"
+val_path: "data/processed/therapist_strategy/val.jsonl"
+prompt_dir: "prompts"
+output_dir: "runs/therapist_strategy/run_001"
+init_adapter_path: "runs/user_emotion/run_001/best_adapter"
+
+batch_size: 1
+lr: 0.00002
+epochs: 3
+max_length: 512
+max_new_tokens: 50
+
+formatting:
+  sph_arng_mod: paired
+  sys_reaction: verbal
+
+labels:
+  - Open question
+  - Approval
+  - Self-disclosure
+  - Restatement
+  - Interpretation
+  - Advisement
+  - Communication Skills
+  - Structuring the therapy
+  - Guiding the Pace and Depth of the Conversation
+  - Others
+
+post_val:
+  run_dir: "runs/therapist_strategy/run_002"
+  batch_size: 8
+  max_length: 512
+  device: "cuda"
+  label_names_json: ""
+  percentile: 0.2
+  save_diagnostics: True
+
+inference:
+  run_dir: "runs/therapist_strategy/run_newPmpt"
+  input_path: "data/processed/therapist_strategy/val.jsonl"
+  adapter_path: "runs/therapist_strategy/run_001/best_adapter"
+  mode: pretrained        # pretrained | lora | full
+  batch_size: 8
+  max_length: 512
+  device: "cuda"
+  percentile: 0.2
+  save_diagnostics: True
+  ablation:
+    video: True
+    history: True
+eval_mode: inference

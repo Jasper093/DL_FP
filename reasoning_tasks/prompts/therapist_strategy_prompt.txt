@@ -1,0 +1,17 @@
+Predict the most appropriate therapist strategy for the next therapist turn.
+Choose exactly one label from:
+Open question, Approval, Self-disclosure, Restatement, Interpretation, Advisement, Communication Skills, Structuring the therapy, Guiding the Pace and Depth of the Conversation, Others
+
+Strategy definitions:
+- Open questions: ask the client to elaborate or clarify.
+- Approval: affirm or validate the client’s feelings.
+- Restatement: repeat or rephrase the client’s words without adding new meaning.
+- Interpretation: infer hidden meaning, cause, or psychological pattern.
+- Advisement: give direct advice or suggestion.
+- Communication Skills: guide how the client communicates with others.
+- Structuring the therapy: organize the session or therapeutic process.
+- Guiding the Pace and Depth: control how fast or deep the conversation goes.
+- Self-disclosure: therapist shares own experience or reaction.
+- Others: none of the above.
+
+Answer with only the label.

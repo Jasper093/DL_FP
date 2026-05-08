@@ -1,0 +1,36 @@
+paths:
+  raw_data_dir: "/home/jsp/DL_final_project/reasoning_tasks/data/raw"
+  processed_data_dir: "/home/jsp/DL_final_project/reasoning_tasks/data/processed"
+  prompts_dir: "../prompts"
+
+files:
+  train: "train_ccnt.json"
+  val: "val_ccnt.json"
+  test: "test_ccnt.json"
+
+prompts:
+  user_emotion: "user_emotion_prediction_prompt.txt"
+  therapist_strategy: "therapist_strategy_prediction_prompt.txt"
+  therapist_emotion: "therapist_emotion_prediction_prompt.txt"
+  therapist_response: "response_generation_prompt.txt"
+
+output:
+  user_emotion_dir: "user_emotion"
+  therapist_strategy_dir: "therapist_strategy"
+  therapist_emotion_dir: "therapist_emotion"
+  therapist_response_dir: "therapist_response"
+  train_file: "train.jsonl"
+  val_file: "val.jsonl"
+  test_file: "test.jsonl"
+
+processing:
+  input_serialization_mode: "joined"
+  keep_debug_metadata: true
+  preview_count_per_task: 3
+  save_preview: true
+
+tasks:
+  enable_user_emotion: true
+  enable_therapist_strategy: true
+  enable_therapist_emotion: true
+  enable_therapist_response: true
