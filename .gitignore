@@ -1,0 +1,86 @@
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+conda_env/
+*.egg-info/
+
+# envrc / local shell env
+.env
+.envrc
+*.env
+
+# =========================
+# Logs / temporary files
+# =========================
+*.log
+logs/
+tmp/
+temp/
+
+# =========================
+# Project generated outputs
+# =========================
+runs/
+**/runs/
+outputs/
+**/outputs/
+checkpoints/
+**/checkpoints/
+checkpoint-*/
+**/checkpoint-*/
+best_adapter/
+**/best_adapter/
+best.ckpt
+**/best.ckpt
+
+# =========================
+# Model weights / adapters
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+
+# =========================
+# Data files
+# =========================
+data/raw/
+data/processed/
+**/data/raw/
+**/data/processed/
+*.jsonl
+*.csv
+*.xlsx
+
+# Optional: ignore downloaded/generated datasets
+*.json
+!configs/*.json
+!**/configs/*.json
+
+# =========================
+# Hugging Face / model cache
+# =========================
+.cache/
+huggingface_cache/
+models--*/
+tokenizer_cache/
+
+# =========================
+# OS / editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
