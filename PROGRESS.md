@@ -32,13 +32,13 @@ Group B: Direct vs structured reasoning
     └── Direct response baseline           ❌ Missing
 
 Group C: Ablation
-    ├── Remove emotion                     🟡 Partial
-    ├── Remove strategy                    🟡 Partial
-    ├── Remove multimodal cues             🟡 Partial
+    ├── Remove emotion                     ✅ Done
+    ├── Remove strategy                    ✅ Done
+    ├── Remove multimodal cues             ✅ Done
     └── Clean comparison table             ❌ Missing / not finalized
 
 Group D: Oracle analysis
-    ├── gold_all                           ❌ Missing
+    ├── gold_all                           ✅ Done
     ├── pred_all                           ❌ Missing
     ├── oracle_emotion                     ❌ Missing
     ├── oracle_strategy                    ❌ Missing
@@ -144,15 +144,15 @@ The proposal says Group C should remove one intermediate sub-task at a time, esp
 
 to test which part contributes most to final response quality.
 
-## Group C status: 🟡 Partially done
+## Group C status: 🟡 Partial
 
 | Ablation | Status | Your current progress |
 | --- | --- | --- |
-| Remove user emotion | 🟡 Partial | You seem to have drop-emotion style configs/runs. Needs final verification and table. |
-| Remove strategy | 🟡 Partial | You seem to have drop-strategy style configs/runs. Needs final verification and table. |
-| Remove multimodal cues/video | 🟡 Partial | You seem to have drop-video / drop-cue style settings. Needs final verification. |
-| Remove history | 🟡 Extra / partial | Useful, but not explicitly one of the main proposal ablations. |
-| Final ablation result table | ❌ Missing / unfinished | Needs clean metrics table for report/slides. |
+| Remove user emotion ✅ Done | Drop-emotion style configs/runs is constructed.|
+| Remove strategy | ✅ Done | Drop-strategy style configs/runs is finished. |
+| Remove multimodal cues/video | ✅ Done | drop-video / drop-cue style settings are all set. |
+| Remove history | ✅ Done | Useful, but not explicitly one of the main proposal ablations. |
+| Final ablation result table | 🟡 Partial | Generated but not yet analyzed. |
 
 ## What Group C still needs
 
@@ -181,7 +181,7 @@ The proposal says Group D should replace predicted intermediate labels with gold
 
 | Oracle mode | Status | Meaning |
 | --- | --- | --- |
-| `gold_all` | ❌ Missing | Task4 uses gold emotion + gold strategy + gold system emotion. |
+| `gold_all` | ✅ Done | Task4 uses gold emotion + gold strategy + gold system emotion. |
 | `pred_all` | ❌ Missing | Task4 uses predicted emotion + predicted strategy + predicted system emotion. |
 | `oracle_emotion` | ❌ Missing | Replace only emotion with gold label. |
 | `oracle_strategy` | ❌ Missing | Replace only strategy with gold label. |
@@ -221,21 +221,6 @@ Main missing metric:
 ```
 BLEU-4
 ```
-
----
-
-# GitHub-friendly status
-
-## Status: 🟡 Needs cleanup
-
-| Item | Status | What to do |
-| --- | --- | --- |
-| Source code structure | ✅ Mostly okay | Keep current folders. |
-| README | 🟡 Needs update | Add current status, commands, missing parts. |
-| `.gitignore` | ❌ Need to verify/add | Exclude runs, adapters, checkpoints, raw data. |
-| Environment file | ❌ Missing / uncertain | Add `requirements.txt` or `environment.yml`. |
-| Runnable command examples | ❌ Missing / incomplete | Add exact commands for preprocessing/training/post-validation. |
-| Teammate onboarding | 🟡 Not ready | Add “what works / what is missing” section. |
 
 ---
 
