@@ -9,7 +9,6 @@ Group A: Faithful 4-task reproduction        ✅ Mostly done, but not fully end-
 Group B: Direct generation vs structured     ❌ Not done yet
 Group C: Ablation on intermediate tasks      🟡 Partially done
 Group D: Oracle analysis                     ❌ Not done yet
-GitHub-friendly collaboration setup          🟡 Needs cleanup/documentation
 ```
 
 ---
