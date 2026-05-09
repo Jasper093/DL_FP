@@ -7,7 +7,7 @@ Your current progress by experiment group:
 ```
 Group A: Faithful 4-task reproduction        ✅ Mostly done, but not fully end-to-end
 Group B: Direct generation vs structured     ❌ Not done yet
-Group C: Ablation on intermediate tasks      🟡 Partially done
+Group C: Ablation on intermediate tasks      ✅ Mostly done, not yet analyzed
 Group D: Oracle analysis                     ❌ Not done yet
 ```
 
@@ -33,8 +33,7 @@ Group B: Direct vs structured reasoning
 Group C: Ablation
     ├── Remove emotion                     ✅ Done
     ├── Remove strategy                    ✅ Done
-    ├── Remove multimodal cues             ✅ Done
-    └── Clean comparison table             ❌ Missing / not finalized
+    └── Remove multimodal cues             ✅ Done
 
 Group D: Oracle analysis
     ├── gold_all                           ✅ Done
@@ -143,7 +142,7 @@ The proposal says Group C should remove one intermediate sub-task at a time, esp
 
 to test which part contributes most to final response quality.
 
-## Group C status: 🟡 Partial
+## Group C status: ✅ Done
 
 | Ablation | Status | Your current progress |
 | --- | --- | --- |
@@ -151,7 +150,6 @@ to test which part contributes most to final response quality.
 | Remove strategy | ✅ Done | Drop-strategy style configs/runs is finished. |
 | Remove multimodal cues/video | ✅ Done | drop-video / drop-cue style settings are all set. |
 | Remove history | ✅ Done | Useful, but not explicitly one of the main proposal ablations. |
-| Final ablation result table | 🟡 Partial | Generated but not yet analyzed. |
 
 ## What Group C still needs
 
@@ -232,9 +230,6 @@ BLEU-4
 2. Finish Group B
    direct response-generation baseline
 
-3. Clean up Group C
-   verify ablation runs and produce table
-
-4. Finish Group D
+3. Finish Group D
    oracle analysis modes
 ```
